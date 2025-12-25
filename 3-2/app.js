@@ -42,8 +42,9 @@ console.log(typeof notSet);
 
 // 予想：true
 console.log(Array.isArray(numbers));
+console.log(typeof numbers);
 
-// 予想：object
+// 予想：objectS
 console.log(typeof object);
 
 // TODO: const で宣言したオブジェクトの『プロパティ変更』を行い、
