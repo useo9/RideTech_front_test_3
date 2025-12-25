@@ -37,3 +37,6 @@ console.log(judgeIf(60), judgeSwitch(60));
 console.log(judgeIf(30), judgeSwitch(30));
 
 // TODO: 「範囲条件には if、固定値マッチには switch が向く」等、読みやすさの観点をコメントで述べる
+// 範囲条件は if のほうが柔軟で分かりやすい。
+// 複数の値を固定でマッチさせる場合は switch 文のほうが見やすく整理できる。
+// どんな条件かによって使い分けると、コードが読みやすくなる。
