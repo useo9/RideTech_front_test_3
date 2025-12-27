@@ -15,6 +15,8 @@
   inset: 0;
   background: var(--overlay);
   opacity: 0; /* TODO: フェード用 transition を指定 */
+  opacity: 0;
+  transition: opacity var(--dur);
 }
 .modal {
   width: min(90vw, 480px);
@@ -23,7 +25,8 @@
   padding: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transform: translateY(-12px);
-  opacity: 0; /* TODO: フェード＋スライド用 transition を指定 */
+  opacity: 0;
+  transition: opacity var(--dur), transform var(--dur);
   position: relative;
 }
 
@@ -33,7 +36,10 @@
 }
 .modal-root.is-open .overlay {
   /* TODO: フェードイン後の opacity を指定 */
+  opacity: 1;
 }
 .modal-root.is-open .modal {
   /* TODO: translate を 0 に、opacity を 1 にする */
-} 
+  transform: translateY(0);
+  opacity: 1;
+}

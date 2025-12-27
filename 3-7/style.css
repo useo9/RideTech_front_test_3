@@ -23,11 +23,22 @@
   display: flex;
   align-items: center;
   gap: 12px;
+
   /* TODO: 出現時のアニメ（@keyframes or transition）を指定（例：フェード＋スライドイン） */
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity var(--dur), transform var(--dur);
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .toast.hide {
   /* TODO: 退場アニメ（フェードアウト＋軽い移動）を指定。終了後に JS で remove する */
+  opacity: 0;
+  transform: translateX(100%);
 }
 
 .toast button {
